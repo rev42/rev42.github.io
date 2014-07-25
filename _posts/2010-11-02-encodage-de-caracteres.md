@@ -6,6 +6,17 @@ categories: localisation
 tags: ascii, localisation, l10n, encodage
 ---
 
+
+
+| Caractère   |   Code     |                             Nom |
+|:------------|:----------:|--------------------------------:|
+| В           |  U+0412    |  Lettre majuscule Cyrillique ve |
+| Β           |  U+0392    |   Lettre majuscule grecque Beta |
+| B           |  U+0042    |       Lettre majuscule latine b |
+
+
+
+
 L'affichage de caractères... Cela parait être la plus basique des opérations. En fait, pas tant que ça. Qui ne s'est
 jamais retrouvé face à des pages contenant des "?????????", "caractÃ¨res" ou "problÃ¨me" ?
 
@@ -13,7 +24,7 @@ Je vous propose une "petite" introduction sur les normes d'encodage de caractèr
 
 D'un point de vue technique, l'unité d'information au sein d'un ordinateur est le bit (sa valeur est 0 ou 1). En
 regroupant ces bits par 8, on obtient un octet (8bits), puis des kilo-octets (ko), méga-octets (Mo), tera-octets (To)
-etc... Grâce à ces bits (système binaire), on peut obtenir des nombres (système décimale).Les 2 caractères japonais
+etc... Grâce à ces bits (système binaire), on peut obtenir des nombres (système décimale).
 
 Pour représenter et stocker un caractère, il faut donc le **transformer en nombre** (rôle du **jeu de caractères**). Ce nombre
 sera ensuite **transformé en bits** (rôle de l'**encodage de caractères**).
@@ -26,10 +37,9 @@ soient la même pour tous.
 ## ASCII : le début d'un semblant d'organisation
 
 Dans les années 1960, l'un des premiers standards utilisé dans les ordinateurs a été l'ASCII. Cette norme code tous les
-caractères anglo-saxons (ça aura son importante plus tard) en attribuant à chaque caractère un nombre entre 0 et 127.
+caractères anglo-saxons (ça aura son importance plus tard) en attribuant à chaque caractère un nombre entre 0 et 127.
 
 Les premières valeurs sont des caractères de contrôle. Ils permettent de faire un retour à la ligne (13), bip sonore (7)...
-
 Exemple : le caractère majuscule "A" est représenté par le nombre "65".
 
 Avec ASCII, l'encodage de caractère est simple : chaque nombre est codé sur 7 bits. La valeur numérique de A est 65.
@@ -54,8 +64,8 @@ polonais...).
 Cependant, toutes ces normes posent certains problèmes :
 
   * Comment représenter des langues basées sur des symboles ? le chinois possède des milliers de caractères. Le codage sur 1 octet est impossible.
-  * Comment fonctionnera l'échange d'information entre une application codé en ISO-8859-1 et une autre codé en ISO-8859-2 ?
-  * Si l'application est utilisé en Pologne (ISO-8859-2), comment s'afficheront les caractères accentués français à l'écran ?
+  * Comment fonctionnera l'échange d'information entre une application codée en ISO-8859-1 et une autre codée en ISO-8859-2 ?
+  * Si l'application est utilisée en Pologne (ISO-8859-2), comment s'afficheront les caractères accentués français à l'écran ?
   * Comment créer puis partager un document mélangeant du texte français, chinois et hongrois ?
 
 Dans un monde où la mondialisation et l'échange d'information sont omniprésents, il était nécessaire de remettre à plat
@@ -73,19 +83,13 @@ La norme fait donc la **différence entre les caractères et leur glyphe** respe
 
 Exemple :
 
-Cette norme, développée dans les années 1990, permet le support de la majorité des caractères utilisés dans les langues
-du monde entier. UNICODE définit comment interpréter les caractères, mais ne définit pas comment représenter ces
-caractères. Cette tâche est gérée par le programme notamment par la police de caractère utilisée.
-
-La norme fait donc la différence entre les caractères et leur glyphe respectif (représentation graphique d'un caractère).
-
 Caractère	Code	Nom
 В	U+0412	Lettre majuscule Cyrillique ve
 Β	U+0392	Lettre majuscule grecque Beta
 B	U+0042	Lettre majuscule latine b
 
 Les lettres majuscule ve (cyrillique), beta (grecque) et b (latin) ont le même glyphe. Cependant, dans UNICODE, ce sont
-des caractères différents avec des codes différents. En effet, imaginons que le même code est été utilisé pour ces 3
+des caractères différents avec des codes différents. En effet, imaginons que le même code ait été utilisé pour ces 3
 caractères et que l'on souhaite passer ce caractère en minuscule : comment savoir s'il faut afficher  в ,  β ou b ?
 
 Au niveau du jeu de caractère, UNICODE associe un nombre à un caractère. La table de caractères est accessible sur le

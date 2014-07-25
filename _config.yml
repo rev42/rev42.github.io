@@ -11,3 +11,6 @@ github_username:  rev42
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+kramdown:
+  input: GFM

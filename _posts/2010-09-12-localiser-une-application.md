@@ -11,8 +11,8 @@ La **localisation** (abrégé sous la forme l10n) est le **processus qui permet 
 Attention, le terme "adapter" est important. Il ne s'agit pas simplement de traduction car il faut également **prendre en
 compte les différences culturelles** (séparateur décimal, format date et d'heure, disposition du clavier...).
 
-L'étape de l10n arrive après celle de l'i18n. Pour obtenir une bonne l10n de l'application, il est impératif qu'il y ait
-eu un effort d'internationalisation.
+L'étape de l10n arrive après celle de l'internationalisation (abrégé i18n). Pour obtenir une bonne l10n de l'application, il est impératif qu'il y ait
+eu un effort d'i18n. J'ai d'ailleurs rédigé une courte [introduction à l'i18n]({% post_url 2010-09-11-internationaliser-une-application %}).
 
 
 ## Les grandes étapes de la localisation
